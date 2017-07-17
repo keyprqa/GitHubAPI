@@ -12,7 +12,7 @@ def all_user_pull_requests(context):
 
 @then('we create new pull requests')
 def create_new_pull_request(context):
-    context.new_pull_request = context.pull.create_pull_request('any')
+    context.new_pull_request = context.pull.create_pull_request()
 
 
 @then('we check count of pull requests increased for {count}')

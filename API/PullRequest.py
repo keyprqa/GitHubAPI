@@ -8,8 +8,7 @@ import random
 class PullRequest(object):
     def __init__(self):
         self.session = git_hub()
-        self.header = {'Authorization': 'token {}'.format(
-            environment['token'])}
+        self.header = {'Authorization': 'token {}'.format(token)}
 
     def get_all_pull_requests(self, dto):
         """
@@ -163,16 +162,14 @@ class PullRequestAPI(object):
         }
 
     def create_pull_request_dto(self, branch=None):
-        if branch is None or branch == 'any':
-            branch = random.choice(environment['test_data']['branches'])
-        elif branch == 'conflict':
-            branch = environment['test_data']['branches'][3]
-        elif branch == 'positive':
-            branch = random.choice(environment['test_data']['branches'][0:3])
+        if branch == 'conflict':
+            branch = environment['test_data']['conflict_branch']
         elif branch == 'not exist':
             branch = 'branch_not_exist'
+        else:
+             branch = random.choice(environment['test_data']['branches'])
         return {
-            "title": str(Faker().name()),
+            "title": 'Amazing new feature',
             "body": str(Faker().text()[0:20]),
             "head": '{username}:{branch}'.format(
                 username=environment['test_data']['owner'],

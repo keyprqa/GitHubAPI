@@ -1,7 +1,3 @@
-token:
-  2a2e08faa1b9fb574849cd241752e87e79181cea
-
-
 git_hub:
   url: https://api.github.com
 
@@ -12,5 +8,9 @@ test_data:
   branches:
     - branch_3
     - branch_4
+    - branch_5
+    - branch_6
+    - branch_7
+    - branch_8
     - no_conflicts
-    - conflict_branch
+  conflict_branch: conflict_branch

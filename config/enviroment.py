@@ -1,3 +1,4 @@
+
 import yaml, os
 
 
@@ -12,6 +13,7 @@ def resolve_file_path(file_name):
 
 
 project_root = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+token = os.environ['GIT_TOKEN']
 environment = read_from_yaml('config/environment_config.yaml')
 
 git_hub = lambda: environment['git_hub']['url']
