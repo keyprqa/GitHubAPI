@@ -1,0 +1,16 @@
+token:
+  2a2e08faa1b9fb574849cd241752e87e79181cea
+
+
+git_hub:
+  url: https://api.github.com
+
+test_data:
+  owner: keyprqa
+  repo:
+    name: TestRepo
+  branches:
+    - branch_3
+    - branch_4
+    - no_conflicts
+    - conflict_branch
