@@ -30,6 +30,10 @@ Run Tests local:
 * Navigate to project folder and install requirements :
     > pip install -r requirements.txt
     
+* Set environment variable:
+    > GIT_TOKEN=''  
+    please set your GIT_TOKEN variable
+    
 * Run PyTest tests :
     > py.test -v py_test/
 
